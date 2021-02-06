@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -45,6 +45,7 @@
   "author": "Peter Olom",
   "homepage": "https://github.com/peter-olom/hookstate-persist",
   "repository": "https://github.com/peter-olom/hookstate-persist",
+  "description": "Simple and configurable peristence plugin for Hookstate state management.",
   "module": "dist/hookstate-persist.esm.js",
   "size-limit": [
     {
