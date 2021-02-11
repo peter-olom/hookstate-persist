@@ -32,13 +32,13 @@ function CreatePersistor({
       id: PersistPluginId,
       init: (s: State<StateValueAtRoot>) => {
         const engineResponse = engine.getItem(key);
-        // hyrateTime the state from async storage
+        // hydrateTime the state from async storage
         Promise.resolve(engineResponse).then(res => {
           if (res) {
             const store = JSON.parse(res);
             s.merge(store);
           }
-          s.merge({ hyrateTime: Date.now() });
+          s.merge({ hydrateTime: Date.now() });
         });
 
         return {
@@ -74,7 +74,7 @@ function PersistorWrapper<S>(state: S) {
   if (typeof state == 'object') {
     return {
       ...state,
-      hyrateTime: null,
+      hydrateTime: null,
     };
   }
   throw new Error('This helper only works on object trees');

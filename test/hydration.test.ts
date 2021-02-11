@@ -16,7 +16,7 @@ const hydrator = () => {
   return new Promise<Record<string, unknown>>((resolve, reject) => {
     setTimeout(() => {
       const state = store.get();
-      if (state.hyrateTime) {
+      if (state.hydrateTime) {
         resolve(state);
       } else {
         reject('Failed to hydrate state');
@@ -38,7 +38,7 @@ describe('The store was loaded from storage ', () => {
 describe('The hydration time exists', () => {
   it('hydrate time check', async () => {
     const res = await hydrator();
-    expect(res).toHaveProperty('hydateTime');
+    expect(res).toHaveProperty('hydrateTime');
   });
 });
 
