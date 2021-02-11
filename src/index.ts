@@ -27,13 +27,13 @@ function CreatePersistor({key, engine, blacklist, whitelist}: ICreatePersistor) 
 			id: PersistPluginId,
 			init: (s: State<StateValueAtRoot>) => {
         const engineResponse = engine.getItem(key);
-				// hydate the state from async storage
+				// hyrateTime the state from async storage
 				Promise.resolve(engineResponse).then((res) => {
 					if (res) {
 						const store = JSON.parse(res);
 						s.merge(store);
 					}
-					s.merge({hydateTime: Date.now()});
+					s.merge({hyrateTime: Date.now()});
 				});
 
 				return {
@@ -67,10 +67,10 @@ function PersistorWrapper<S>(state: S) {
 	if (typeof state == 'object') {
 		return {
 			...state,
-			hydateTime: null,
+			hyrateTime: null,
 		};
 	}
-	throw new Error('This helper only works on object trees/maps');
+	throw new Error('This helper only works on object trees');
 }
 
 export default CreatePersistor;

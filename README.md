@@ -26,8 +26,8 @@ import CreatePersistor, {PersistorWrapper} from 'hookstate-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Product} from '../utils/types';
 
-// for map/tree like state, wrap root state with Persist wrapper
-// this gives you the benefit of validating the hydrateTime value 
+// for tree object state, wrap root state with Persist wrapper
+// this gives you the benefit of validating the hydrateTime value is not null
 const wrapped = PersistorWrapper({
   cart: [] as Array<Product>,
   user: {} as User,
@@ -44,10 +44,7 @@ const persistor = CreatePersistor({
 // attach plugin and you're done
 store.attach(persistor);
 
-
 ```
-
-
 ### Peristor options
 
 ```js
@@ -63,7 +60,6 @@ CreatePersistor {
 ## API
 
 ```js
-  export default store;
   CreatePersistor(config: ICreatePersistor) // creates the peristence plugin
   PersistorWrapper(state: State<S>) // Wrapps the root state. Do not use if root state is not map/tree like
 ```
