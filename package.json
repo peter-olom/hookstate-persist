@@ -67,6 +67,6 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "@hookstate/core": "^3.0.4"
+    "@hookstate/core": "^4.0.0-rc21"
   }
 }

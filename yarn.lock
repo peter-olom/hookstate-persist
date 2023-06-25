@@ -853,10 +853,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@hookstate/core@^3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@hookstate/core/-/core-3.0.4.tgz#1d53a365dfd0512ba0df73469ca38db4d5704d9d"
-  integrity sha512-RIQcqeZdjqAeaF2bEiLkv+tt3xWQNr97NYWHwpzpFmmiXx8ayiESM49jyAMruYFvZKmTLT1ebMcKg6nvYbepUg==
+"@hookstate/core@^4.0.0-rc21":
+  version "4.0.0-rc21"
+  resolved "https://registry.yarnpkg.com/@hookstate/core/-/core-4.0.0-rc21.tgz#5c7c8e1ec02d7a2eea148edf88b9c8aa3baf0fa8"
+  integrity sha512-aAiF537i9a54OlWzA/EtOa1l4bJMmpmJ4Fb/ZV8R30xD6jGMCGbCxHcb6SWIqO92T/w8dFXyl5XQbQ8reFpQrA==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
